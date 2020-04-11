@@ -18,3 +18,4 @@ jobs:
       with:
         imageName: docker.io/niallthomson/cnb-test:sdasdasd
         builder: heroku/buildpacks:18
+        publish: true
