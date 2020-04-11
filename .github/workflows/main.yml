@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Install pack
-      run: wget https://github.com/buildpack/pack/releases/download/v0.9.0/pack-v0.9.0-linux.tgz && tar -xvf pack-v0.9.0-linux.tgz
-    - name: Run pack
-      run: ./pack build docker.io/niallthomson/cnb-test -p . --builder heroku/buildpacks:18
+
+    - name: build
+      uses: niallthomson/cnb-build-action@master
+      with:
+        imageName: docker.io/niallthomson/cnb-test:sdasdasd
+        builder: heroku/buildpacks:18
